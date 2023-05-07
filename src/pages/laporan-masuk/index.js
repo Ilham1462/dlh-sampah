@@ -32,7 +32,7 @@ const LaporanMasukPage = () => {
       {
         id: 'Triwulan',
         header: 'Triwulan',
-        accessorFn: (row, index) => `${row.triwulan} - ${row.tahun}`
+        accessorFn: (row, index) => `${row.triwulan} (${row.tahun})`
       },
       {
         id: 'status',
