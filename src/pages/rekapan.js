@@ -23,31 +23,28 @@ const RekapanPage = () => {
         accessorKey: 'perusahaan'
       },
       {
-        id: 'triwulan',
-        header: 'Triwulan',
-        accessorKey: 'triwulan'
+        id: 'jenisLaporan',
+        header: 'Jenis Laporan',
+        accessorKey: 'jenisLaporan'
       },
-
+      {
+        id: 'Triwulan',
+        header: 'Triwulan',
+        accessorFn: (row, index) => `${row.triwulan} (${row.tahun})`
+      },
       {
         id: 'aksi',
         header: 'Aksi',
         cell: ({ row }) => (
           <Box sx={{ display: 'flex' }}>
-            {row.getCanExpand() && (
-              <Tooltip title='Detail Perlakuan' followCursor>
-                <IconButton color='primary' onClick={row.getToggleExpandedHandler()}>
-                  <Icon icon='mdi:arrow-down-left-bold' />
-                </IconButton>
-              </Tooltip>
-            )}
-            <Tooltip title='Ubah' followCursor>
-              <IconButton color='info'>
-                <Icon icon='mdi:pencil-outline' />
+            <Tooltip title='Export Neraca' followCursor>
+              <IconButton color='primary'>
+                <Icon icon='mdi:file-download-outline' />
               </IconButton>
             </Tooltip>
-            <Tooltip title='Hapus' followCursor>
-              <IconButton color='error'>
-                <Icon icon='mdi:delete-outline' />
+            <Tooltip title='Download TTE' followCursor>
+              <IconButton color='success'>
+                <Icon icon='mdi:file-download-outline' />
               </IconButton>
             </Tooltip>
           </Box>

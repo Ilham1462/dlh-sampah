@@ -1,10 +1,20 @@
 export const rekapan = [
   {
     perusahaan: 'PT. IMIP',
-    triwulan: 1
+    jenisLaporan: 'Limbah B3',
+    triwulan: 1,
+    tahun: 2023
   },
   {
     perusahaan: 'PT. BTIIG',
-    triwulan: 1
+    jenisLaporan: 'Limbah B3',
+    triwulan: 1,
+    tahun: 2023
+  },
+  {
+    perusahaan: 'PT. Wanxiang Nickel Indonesi',
+    jenisLaporan: 'Sampah Spesifik',
+    triwulan: 1,
+    tahun: 2023
   }
 ]
